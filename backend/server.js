@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 app.use(cors());
 app.use(express.json()); //to parse JSON payload
+app.use(express.static('public'));
 app.use("/api/auth", authRoutes);
 
 //Listen for request
